@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/petverse-store//_next/:path+",
+        "destination": "/petverse-store/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
