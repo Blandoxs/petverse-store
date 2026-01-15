@@ -3,7 +3,19 @@
 import React, { useState } from 'react';
 import { ShoppingCart, Heart, Star, Search, Menu, X, ChevronRight, Truck, Shield, Headphones } from 'lucide-react';
 
-const products = [
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  originalPrice?: number;
+  rating: number;
+  reviews: number;
+  category: string;
+  img: string;
+  badge: string;
+};
+
+const products: Product[] = [
   {
     id: 1,
     name: "Premium Organic Dog Food",
@@ -93,17 +105,17 @@ const products = [
 const categories = ["All", "Food", "Toys", "Furniture", "Travel", "Tech", "Grooming", "Beds"];
 
 export default function PetVerse() {
-  const [cart, setCart] = useState([]);
-  const [favorites, setFavorites] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
+  const [cart, setCart] = useState<Product[]>([]);
+  const [favorites, setFavorites] = useState<number[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [searchOpen, setSearchOpen] = useState<boolean>(false);
 
-  const addToCart = (product) => {
+  const addToCart = (product: Product) => {
     setCart([...cart, product]);
   };
 
-  const toggleFavorite = (productId) => {
+  const toggleFavorite = (productId: number) => {
     setFavorites(prev => 
       prev.includes(productId) 
         ? prev.filter(id => id !== productId)
@@ -115,8 +127,8 @@ export default function PetVerse() {
     ? products 
     : products.filter(p => p.category === selectedCategory);
 
-  const getBadgeColor = (badge) => {
-    const colors = {
+  const getBadgeColor = (badge: string) => {
+    const colors: Record<string, string> = {
       "Best Seller": "bg-amber-500",
       "Premium": "bg-purple-500",
       "New": "bg-emerald-500",
