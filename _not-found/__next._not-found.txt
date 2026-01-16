@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
 2:I[39756,["/petverse-store/_next/static/chunks/2f236954d6a65e12.js"],"default"]
 3:I[37457,["/petverse-store/_next/static/chunks/2f236954d6a65e12.js"],"default"]
-0:{"buildId":"Z5OyHL4gB_KlmuNiCerBI","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"h2R5LNJyNz74e-65bfv6l","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
