@@ -3,7 +3,7 @@ self.__BUILD_MANIFEST = {
     "afterFiles": [],
     "beforeFiles": [
       {
-        "source": "/.//_next/:path+",
+        "source": "/petverse-store//_next/:path+",
         "destination": "/petverse-store/_next/:path+"
       }
     ],
